@@ -1,0 +1,39 @@
+.conten-from {
+    display: flex;
+    justify-content: center;
+    margin: 5vw 0;
+    .mat-form-field {
+        width: 20vw;
+        margin: 0 5vw;
+    }
+    .mat-form-field-wrapper {
+        height: 5vw;
+    }
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+        height: 100%;
+    }
+    .example-button-container {
+        margin-top: 12px;
+    }
+    .span-info {
+        margin-left: 89px;
+        color: red;
+    }
+    .ng-tns-c64-0 .ng-star-inserted {
+        font-weight: bold;
+    }
+    .ng-tns-c64-1 .ng-star-inserted {
+        font-weight: bold;
+    }
+    .box-hint {
+        display: flex;
+        justify-content: space-around;
+        width: 82%;
+    }
+    .hint-name {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}

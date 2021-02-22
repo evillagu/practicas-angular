@@ -1,0 +1,42 @@
+<form [formGroup]="form" (ngSubmit)="save($event)" class="conten-from">
+    <div>
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>Nombre</mat-label>
+                <input formControlName="name" matInput placeholder="Placeholder" />
+
+            </mat-form-field>
+        </p>
+        <div class="box-hint">
+            <div *ngIf="form.get('name').errors && form.get('name').touched">
+                <p class="span-info" *ngIf="form.get('name').hasError('required')">
+                    Es un campo requerido
+                </p>
+            </div>
+            <mat-hint class="hint-name">Escriba aqui el nombre</mat-hint>
+        </div>
+    </div>
+    <div>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Descripciòn</mat-label>
+                <input formControlName="description" matInput placeholder="Placeholder" />
+            </mat-form-field>
+        </p>
+        <div class="box-hint">
+            <div *ngIf="form.get('description').errors && form.get('description').touched">
+                <p class="span-info" *ngIf="form.get('description').hasError('required')">
+                    Es un campo requerido
+                </p>
+            </div>
+            <mat-hint class="hint-name">Describa que es</mat-hint>
+        </div>
+
+    </div>
+
+    <div class="example-button-container">
+        <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" type="submit" [disabled]="form.invalid">
+          <mat-icon>plus_one</mat-icon>
+        </button>
+    </div>
+</form>
