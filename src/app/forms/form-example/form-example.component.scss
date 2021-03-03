@@ -37,3 +37,22 @@
         font-weight: 500;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .conten-from {
+        flex-flow: column;
+        mat-form-field {
+            width: 90vw !important;
+        }
+        .box-hint {
+            margin-top: -20px;
+            margin-bottom: 20px;
+        }
+        .span-info {
+            margin-left: 13%;
+        }
+        .example-button-container {
+            text-align: center;
+        }
+    }
+}

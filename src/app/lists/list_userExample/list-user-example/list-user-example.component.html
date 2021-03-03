@@ -1,22 +1,26 @@
 <div class="conten-list">
     <div class="box-list">
-        <div class="box-list_text">
+        <div class="box-list_text box-list_text--background">
             <p class="text-title-list">NOMBRE</p>
             <P class="text-title-list">DESCRIPCION</P>
         </div>
-        <mat-selection-list #shoes (selectionChange)="onGroupsChange(shoes.selectedOptions.selected)">
-            <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
-                <div class="box-list_text box-list_text--context">
-                    <p>{{shoe.name}}</p>
-                    <p>{{shoe.description}}</p>
-                </div>
-            </mat-list-option>
-        </mat-selection-list>
+        <mat-card>
+            <mat-selection-list #shoes (selectionChange)="onGroupsChange(shoes.selectedOptions.selected)">
+                <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                    <div class="box-list_text box-list_text--context">
+                        <p>{{shoe.name}}</p>
+                        <p>{{shoe.description}}</p>
+                    </div>
+                </mat-list-option>
+            </mat-selection-list>
+        </mat-card>
     </div>
     <div class="box-list">
-        <mat-card>Los elementos seleccionados</mat-card>
+        <mat-card class="box-list_text box-list_text--background">
+            <p class="text-title-list">Los elementos seleccionados</p>
+        </mat-card>
         <div class="box-list box-list__description">
-            <mat-card class="box-text" *ngFor="let listShoes of listShoes">
+            <mat-card class="box-list_text box-list_text--context" *ngFor="let listShoes of listShoes">
                 <p>{{listShoes.name}}</p>
                 <p>{{listShoes.description}}</p>
             </mat-card>

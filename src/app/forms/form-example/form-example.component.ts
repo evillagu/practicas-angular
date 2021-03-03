@@ -31,6 +31,7 @@ export class FormExampleComponent implements OnInit {
         name: value.name,
         description: value.description
       });
+      this.form.reset();
       console.log(this.fromExampleService);
     } else {
       this.form.markAllAsTouched();

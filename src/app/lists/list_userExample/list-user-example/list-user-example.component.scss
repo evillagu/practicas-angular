@@ -5,6 +5,7 @@
 
 .box-list {
     width: 40%;
+    padding-top: 18px;
     &__description {
         min-height: 50%;
         margin-top: 10px;
@@ -13,19 +14,42 @@
     &_text {
         display: flex;
         justify-content: space-around;
+        margin-bottom: 25px;
         &--context {
-            margin: 0 0 0 20% !important;
             justify-content: space-between;
-            width: 65%;
+            width: 100%;
+        }
+        &--background {
+            background: #828282;
+            p {
+                color: white;
+                padding: 12px 0;
+            }
+        }
+        p {
+            width: 45%;
         }
     }
 }
 
-.box-text {
-    display: flex;
-    justify-content: space-around;
-}
-
 .text-title-list {
     font-weight: bold;
+    letter-spacing: .8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .box-list {
+        width: 100%;
+        &_text {
+            display: flex;
+            justify-content: space-around;
+            &--context {
+                flex-flow: column;
+                padding-top: 67px;
+            }
+        }
+    }
+    .conten-list {
+        flex-flow: column;
+    }
 }
